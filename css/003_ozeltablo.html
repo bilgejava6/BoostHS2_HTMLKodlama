@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Özel Tablo</title>
+    <style>
+        table{
+            width: 100%;
+            border-collapse: collapse; /*boşluklu mu bitişik mi*/
+        }
+        th, td{
+            border: 1px solid black;
+            padding: 6px;
+        }
+        th{
+            background-color: cornflowerblue;
+            color: white;
+        }
+        tr:nth-child(odd){
+            background-color: rgb(237, 198, 198);
+        }
+        tr:hover{
+            background-color: rgb(255, 0, 0);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>ad</th>
+                <th>adres</th>
+                <th>yaş</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Ahmet</td>
+                <td>Ankara</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Melisa</td>
+                <td>İzmir</td>
+                <td>36</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Ali</td>
+                <td>İstanbul</td>
+                <td>45</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Yasemin</td>
+                <td>Antalya</td>
+                <td>29</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Hasan</td>
+                <td>Adana</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Emine</td>
+                <td>Trabzon</td>
+                <td>27</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Yusuf</td>
+                <td>İzmir</td>
+                <td>31</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
