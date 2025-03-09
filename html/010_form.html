@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Kullanımı</title>
+</head>
+<body>
+    <!--
+        Form, client tan server'a bilgi göndermek için kullanılır. Form bileşeni içerisindeki inputların
+        name özelliği ile içerilerine girilen bilgiler aynı name değişkeni içerisinde toplanır ve server'a
+        gönderilir.
+    -->
+    <form action="http://localhost:9090/dev/v1/user/register" method="post">
+        <div>
+            <label>Kullanıcı adı</label> <br>
+            <input type="text" name="username">
+        </div>
+        <div>
+            <label >Şifre</label> <br>
+            <input type="password" name="password">
+        </div>
+        <div>
+            <label>Cinsiyet</label> <br>
+            <input type="radio" name="cinsiyet" value="Erkek" /> <label> Erkek</label>
+            <input type="radio" name="cinsiyet" value="Kadın" /> <label> Kadın</label>
+            <input type="radio" name="cinsiyet" value="Belirtmek İstemiyor" /> <label> Belirtmek İstemiyor</label>
+        </div>
+        <div>
+            <button type="submit">Kayıt Ol</button>
+        </div>
+    </form>
+    <br>
+    <hr>
+    <br><br>
+    <form action="https://www.google.com.tr/search">
+        <div>
+            <input type="text" name="q" id="q" placeholder="Arama yapın" style="width: 400px;">
+           
+        </div>
+        <br>
+        <div>
+            <button type="submit">Ara</button>
+        </div>
+    </form>
+</body>
+</html>

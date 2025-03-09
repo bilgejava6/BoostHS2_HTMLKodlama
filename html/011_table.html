@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablo ile Çalışmak</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #d2a679;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        .zoom {
+            transition: transform 0.2s;
+        }
+        .zoom:hover {
+            transform: scale(1.5);
+        }
+        img{
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Ad Soyad</th>
+                <th>Adres</th>
+                <th>Telefon</th>
+                <th>Resim</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Ali Veli</td>
+                <td>İstanbul</td>
+                <td>1234567890</td>
+                <td><img src="https://picsum.photos/50/50" alt="Ali Veli" class="zoom"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ayşe Fatma</td>
+                <td>Ankara</td>
+                <td>0987654321</td>
+                <td><img src="https://picsum.photos/50/50" alt="Ayşe Fatma" class="zoom"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Mehmet Ahmet</td>
+                <td>İzmir</td>
+                <td>5432167890</td>
+                <td><img src="https://picsum.photos/50/50" alt="Mehmet Ahmet" class="zoom"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Fatma Yılmaz</td>
+                <td>Bursa</td>
+                <td>1231231234</td>
+                <td><img src="https://picsum.photos/50/50" alt="Fatma Yılmaz" class="zoom"></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Ahmet Kaya</td>
+                <td>Antalya</td>
+                <td>4321432143</td>
+                <td><img src="https://picsum.photos/50/50" alt="Ahmet Kaya" class="zoom"></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Elif Demir</td>
+                <td>Adana</td>
+                <td>5678567856</td>
+                <td><img src="https://picsum.photos/50/50" alt="Elif Demir" class="zoom"></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Mustafa Çelik</td>
+                <td>Trabzon</td>
+                <td>6789678967</td>
+                <td><img src="https://picsum.photos/50/50" alt="Mustafa Çelik" class="zoom"></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Hülya Şahin</td>
+                <td>Eskişehir</td>
+                <td>7890789078</td>
+                <td><img src="https://picsum.photos/50/50" alt="Hülya Şahin" class="zoom"></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Emre Öz</td>
+                <td>Konya</td>
+                <td>8901890189</td>
+                <td><img src="https://picsum.photos/50/50" alt="Emre Öz" class="zoom"></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Selin Aydın</td>
+                <td>Gaziantep</td>
+                <td>9012901290</td>
+                <td><img src="https://picsum.photos/50/50" alt="Selin Aydın" class="zoom"></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Burak Yıldız</td>
+                <td>Samsun</td>
+                <td>0123012301</td>
+                <td><img src="https://picsum.photos/50/50" alt="Burak Yıldız" class="zoom"></td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Deniz Ak</td>
+                <td>Kayseri</td>
+                <td>2345234523</td>
+                <td><img src="https://picsum.photos/50/50" alt="Deniz Ak" class="zoom"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

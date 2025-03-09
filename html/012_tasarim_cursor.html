@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hepsiburada Premium</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .search-bar {
+            flex: 1;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .user-actions {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .location, .account, .cart {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .nav-categories {
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 50px;
+            background: #f8f8f8;
+            border-bottom: 1px solid #eee;
+        }
+
+        .category-item {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .promotions {
+            display: flex;
+            gap: 10px;
+            padding: 20px 50px;
+            overflow-x: auto;
+        }
+
+        .promo-card {
+            min-width: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .promo-card img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .slider {
+            position: relative;
+            margin: 20px 50px;
+        }
+
+        .slider img {
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        .slider-nav {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 5px;
+        }
+
+        .slider-dot {
+            width: 8px;
+            height: 8px;
+            background: #fff;
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+
+        .slider-dot.active {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="hepsiburada-premium-logo.png" alt="Hepsiburada Premium">
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Ürün, kategori veya marka ara">
+        </div>
+
+        <div class="user-actions">
+            <div class="location">
+                <span>Konum</span>
+                <span>YENİEV</span>
+            </div>
+            
+            <div class="account">
+                <span>Hesabım</span>
+                <span>MUHAMME...</span>
+            </div>
+
+            <div class="cart">
+                <span>Sepetim</span>
+                <span>0</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav-categories">
+        <a href="#" class="category-item">Elektronik</a>
+        <a href="#" class="category-item">Moda</a>
+        <a href="#" class="category-item">Ev, Yaşam, Kırtasiye, Ofis</a>
+        <a href="#" class="category-item">Oto, Bahçe, Yapı Market</a>
+        <a href="#" class="category-item">Anne, Bebek, Oyuncak</a>
+        <a href="#" class="category-item">Spor, Outdoor</a>
+        <a href="#" class="category-item">Kozmetik, Kişisel Bakım</a>
+        <a href="#" class="category-item">Süpermarket, Pet Shop</a>
+        <a href="#" class="category-item">Kitap, Müzik, Film, Hobi</a>
+    </nav>
+
+    <div class="promotions">
+        <div class="promo-card">
+            <img src="promo1.jpg" alt="Büyük Mart İndirimleri">
+        </div>
+        <div class="promo-card">
+            <img src="promo2.jpg" alt="Şaşırtan İndirimler">
+        </div>
+        <!-- Diğer promosyon kartları -->
+    </div>
+
+    <div class="slider">
+        <img src="ramazan-indirimleri.jpg" alt="Ramazan İndirimleri">
+        <div class="slider-nav">
+            <div class="slider-dot active"></div>
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+            <!-- Diğer slider noktaları -->
+        </div>
+    </div>
+</body>
+</html>
