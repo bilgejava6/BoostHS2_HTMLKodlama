@@ -1,0 +1,32 @@
+.container{
+    border: 1px solid black;
+    border-radius: 15px;
+    min-height: 350px;
+    margin: 10px;
+}
+
+.form-container{
+    margin: 5px;
+    padding: 5px;    
+}
+
+.form-label{
+    display: block;
+    margin-bottom: 3px;    
+}
+
+.form-input{
+    width: 60%;
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: medium;
+}
+
+.form-select{
+    width: 62%;
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: medium;
+}
