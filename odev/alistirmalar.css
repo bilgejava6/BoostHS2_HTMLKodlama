@@ -1,0 +1,49 @@
+.container{
+    height: 96vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex3{
+    flex: 3;
+}
+.flex9{
+    flex: 9;
+}
+
+.header{
+    margin: 10px;   
+    flex: 1;
+}
+
+.p10{
+    padding: 10px;
+}
+.pl10{
+    padding-left: 10%;
+}
+.pr10{
+    padding-right: 10%;
+}
+
+.col{
+    border: 2px solid red;
+    margin: 15px;
+    border-radius: 20px;
+}
+
+h1{
+    text-align: center;
+}
+
+.menu{
+    margin-left: 150px;
+    margin-right: 150px;
+    background-color: #F5F5F5;
+    min-height: 40px;
+}
