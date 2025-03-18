@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        /**
+         * Object -> Key-Value Pair / other name JsonObject
+         * Array -> List of values / jsonArray
+         * JAVA 
+         * Araba araba = new Araba();
+         * araba.marka = "BMW";
+         * araba.model = "X6";
+         * araba.yil = 2020;
+         * JavaScript
+         * let araba = {
+         *      marka : "BMW",
+         *      model : "X6",
+         *      yil : 2020
+         * };
+         * 
+         */ 
+
+         let araba = {
+            marka: "BMW",
+            model: "X6",
+            yil: 2025
+         };
+
+         console.log(araba);
+         console.log('araba markası....: ', araba.marka);
+         // JsonArray
+         let arabaListesi = [
+            {
+                marka: "BMW",
+                model: "X6",
+                yil: 2025
+            },
+            {
+                marka: "Mercedes",
+                model: "C180",
+                yil: 2020
+            },
+            {
+                marka: "Audi",
+                model: "A3",
+                yil: 2019
+            }
+         ];
+        console.log(arabaListesi);
+        console.log('2. arabanın modeli...: ', arabaListesi[1].model);
+        
+    </script>
+</body>
+</html>

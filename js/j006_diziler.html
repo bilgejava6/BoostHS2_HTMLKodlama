@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diziler</title>
+</head>
+<body>
+    <script>
+        /**
+         * JAva diziler -> {5,32,32,567,7788} => String[] araba = new String[4];
+         * Javascript -> [5,32,23,4534,6546]
+         * JavaScript Array -> Java ArrayList
+        */
+        let araba = ["BMW", "Mercedes", "Audi", "Ferrari"];
+        console.log(araba);
+        araba.push("Renault");// sona eleman ekler 
+        console.log(araba);
+        araba.unshift("Toyota");// başa eleman ekler
+        console.log(araba);
+        araba.pop();// son elemanı siler
+        console.log(araba);
+        araba.shift();// baştaki elemanı siler
+        console.log(araba);
+        let positionAudi = araba.indexOf('Audi');// elemanın indexini verir
+        console.log(positionAudi);
+        araba.reverse();// diziyi ters çevirir
+        console.log(araba);
+        araba.sort();// diziyi sıralar
+        console.log(araba);
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    @keyframes bounce {
+        from { transform: translate(0, 0); }
+        to { transform: translate(0, 250px); }
+    }
+    .container {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    }
+    .circle {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: rgb(210, 68, 68);
+    }
+    .offsetOne { animation-delay: 200ms; }
+    .offsetTwo { animation-delay: 400ms; }
+
+    .animate {
+    animation-name: bounce;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+    animation-direction: alternate;
+    animation-duration: 1s;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle animate"></div>
+        <div class="circle animate offsetOne"></div>
+        <div class="circle animate offsetTwo"></div>
+    </div>
+</body>
+</html>

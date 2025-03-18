@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koşul If or Switch</title>
+    <style>
+        div{
+            margin: 10px;
+            padding: 5px;
+        }
+        input{
+            width: 250px;
+            margin-top: 5px;
+        }
+        button{
+            padding: 5px;
+            width: 150px;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <div>
+            <label>Kullanıcı adı</label> <br>
+            <input type="text" id="txtUserName">
+        </div>
+        <div>
+            <label>Şifre</label> <br>
+            <input type="password"  name="" id="txtPassword">
+        </div>
+        <div>
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+    <script>
+        const userName = "admin";
+        const password = "1234";
+        /**
+         * DİKKAT!!!!!
+         * burada sayfada var olan etiketlerden bilgi almak gereklidir.
+         * JAva için düşünelim, 
+         * javada bir nesne üretimi ilgili sınıftan yaratılır ve içeirisindeki
+         * verilere class.getOzellik() vs. şeklinde ulaşılır.
+         * aynı şekilde bir HTML sayfasının nesne bileşenlerine ulaşmak için
+         * document -> bu safyanın nesne modeli
+         * document.getElementById("txtUserName") -> bu sayfanın nesne modelinden
+         * id'si txtUserName olan nesneye ulaşır.
+         */ 
+        
+        /**
+         * Bu bir fonksiyon tanımıdır. JAva da method a benzer.
+         * */    
+        function login(){
+            let txtUseName = document.getElementById('txtUserName').value;
+            let txtPassword = document.getElementById('txtPassword').value;
+            /**
+             * if() 
+             * if() else
+             * if() else if() ..... else
+             * **/
+            if(txtUseName === userName && txtPassword === password){
+                alert("Giriş başarılı"); // uyarı balonu çıkartır.
+            }else{
+                alert("Kullanıcı adı veya şifre hatalı");
+            }
+        }
+    </script>
+</body>
+</html>

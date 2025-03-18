@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Değişkenler</title>
+</head>
+<body>
+    
+
+    <script>
+    /**
+     * DİKKAT!!!!! 
+     * JAvaScript, java gibi bir dil değildir ve (Type Safe) tip güvenliği yoktur. Evet bir 
+     * kodlama aracıdır ancak değişkenlerin türleri yoktur. Genel olarak 
+     * tanımlanır ve kullanılırlar.
+     * örneğin;
+     * java da bir sayı için bile farklı değişken türleri vardır
+     * int, long, double, float, short, byte gibi
+     * javaScript e geçtiğimizde ise böyle bir durum yoktur. Tüm değişken
+     * türlerini;
+     * let, var, const ile tanımlayabiliriz. 
+     */
+      var sayi =  5;
+      console.log(sayi);
+      sayi = " bu nedir ki?";
+      console.log(sayi);
+      sayi = true;
+      console.log(sayi);
+      sayi = {
+        id: 4,
+        ad: "demet",
+        yaş: 25
+      }  
+      console.log(sayi);
+
+      let deger;
+      /**
+       * Burada const ile oluşturulan değerler değiştirilemezler.
+       */  
+      const sabitDeger = 5;
+      //sabitDeger = 999;
+      console.log(sabitDeger);
+      /**
+       * ÖNEMLİ!!!!!1
+       * kodun akışında bir noktada bir hata var ise, hatanın olduğu 
+       * yerden itibaren aşağıya kodru kodlar çalışmaz. Siteniz hata vermeye başlar.
+       * 
+       */ 
+    </script>
+</body>
+</html>
