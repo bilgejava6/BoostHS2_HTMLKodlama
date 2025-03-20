@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom kullanımı</title>
+</head>
+<body>
+    
+    <h1>DOM nedir?</h1>
+    <hr>
+    <button onclick="changeBgColor('red')" >BG - Red</button>
+    <button onclick="changeBgColor('grey')">BG - Grey</button>
+    <button onclick="changeColor('blue')">Color - Blue</button>
+    <button onclick="changeColor('purple')">Color - Purple</button>
+    <hr>
+    <button onclick="addInput()">input text ekle</button>
+    <button onclick="addDiv()">daire ekle</button>
+    <hr>
+    <div id="container">
+
+    </div>
+    <script>
+        /**
+         * document object model (DOM)
+         * web sayfasında var olan tüm hhtml elementleri dom olarak adlandırılır. Bu bileşenlere erişim 
+         * sağlamak ve üzerlerinde değişiklik yapmak için document objesi kullanılır.
+         * 
+         * 
+        */
+       const header1 = document.querySelector('h1');
+       //header1.style.color = 'green';
+       //header1.style.backgroundColor = 'grey';
+       function changeBgColor(color){
+           header1.style.backgroundColor = color;
+       }
+       function changeColor(color){
+           header1.style.color = color;
+       }   
+       function addInput(){
+         const newInput = document.createElement('input'); // bu bir input TAG i oluşturur.
+         const container = document.getElementById('container'); // id si container olan div i seçer.
+         container.appendChild(newInput); // container içerisine newInput i ekler.
+       }  
+       function addDiv(){
+        const newDiv = document.createElement('div');
+        const container = document.getElementById('container');
+        newDiv.style.width = '100px';
+        newDiv.style.height = '100px';
+        newDiv.style.borderColor = 'red';
+        newDiv.style.borderStyle = 'solid';
+        newDiv.style.borderRadius = '50%';
+        newDiv.style.display = 'inline-block';
+        container.appendChild(newDiv);
+       }  
+    </script>
+</body>
+</html>

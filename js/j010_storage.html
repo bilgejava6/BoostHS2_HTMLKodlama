@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Kullanımı</title>
+</head>
+<body>
+    
+
+    <script>
+        /**
+         * Storage Kullanımı
+         * ------------------------
+         * Belli verilerin tarayıcıda saklanmasını sağlar. Geçici yada kalıcı olarak saklanabilir.
+         * -----
+         * Bir web sitesi, ihtiyaç duyabileceği önemli verileri farklı sayfalra taşımak ya da 
+         * daha sonra tekrar siteye girişlerde kullanılabilecek olan dataları temin etmek için 
+         * bu yapıyı kullanır.
+         * -----
+         * bir sayfadan başka bir sayfaya veri taşımak: ürünId, kullanıcıAdı, SepetId v.s
+         * login işlemlerinde kullanıcı sunucudan aldığı refresh, access tokenleri saklamak için 
+         * LocalStorage -> kalıcı olarak trayıcının belleğinde saklar. Tarayıcı kapatılsa bile silinmez.
+         * SessionStorage -> geçici olarak veriler saklanır. İligili internet sayfayı açık olduğu sürece
+         * yani oturum var olduğu sürece bu bilgiler saklanır. Tarayıcı kapatıldığında silinir.
+         * -----
+         * Token kullanımı şöyle olur,
+         * 1. kullanıcı login olur ve sunucudan iki farklı token alır.
+         * 2. refresh token -> kullanıcının access token süresinin dolduğun yeniden token alabilmesi için 
+         * kullanılan tokan dır ve local storage da saklanır.
+         * 3. access token -> kullanıcı login olduğu ve oturum açık kaldığı sürece istek atmak içim kullanacapı
+         * token dir. ve session storage da saklanır.
+         * 
+        */
+       // storage a veri eklemek/yazamak için kullanım
+       localStorage.setItem('refreshToken', 'fsdfr3425gfg3453');
+       console.log('local storage....: ', localStorage);
+
+       sessionStorage.setItem('accessToken', 'fdgfd5345fbfgbfd6445');
+         console.log('session storage....: ', sessionStorage);
+
+       // stoorage dan veri okumak için kullanım
+       let refreshToken = localStorage.getItem('refreshToken'); 
+         console.log('refreshToken....: ', refreshToken);
+         
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /**
+         * function -> Java method ile aynı işlevi görür sadece syntax i farklıdır.
+         * örn: java da toplama methodu
+         * public int toplama(int a, int b){
+         *       return a+b;
+         * }
+         * int sonuc = toplama(45,678);
+         * ----------
+         * javascript te function
+         * DİKKAT!!! js type safe değildir. bu nedenle değişkenlerin tipleri tanımlanmaz.
+         * function toplama(a,b){
+         *     return a+b;
+         * }
+         * let sonuc = toplama(45,678);
+         * let sonuc = toplama('beş', 'yetmiş yedi');
+         */
+        // görevi, a ile b yi toplamak, birleştirmek olabilir. 
+        function toplama(a,b){
+            return a+b;
+        }
+        let sonuc = toplama(21,36);
+        console.log('sonuç.....: ', sonuc);
+        sonuc = toplama('beş', 'yetmiş yedi');
+        console.log('sonuç.....: ', sonuc);
+        // const function atama 
+        const bolme = function(a,b){
+            return a/b;
+        }
+        sonuc = bolme(36,6);
+        console.log('sonuç.....: ', sonuc);
+        // arrow function 
+        const carpma = (a,b) => a*b;
+        sonuc = carpma(6,6);
+        console.log('sonuç.....: ', sonuc);
+        // arrow function
+        const cikarma = (a,b) => {
+            // other codes
+            return a-b;
+        }
+        const ekranaYazdir = (a) => console.log('ekrana yazdırılan değer: ', a);
+        const ekranaYazdir2 = (a) => {
+             console.log('ekrana yazdırılan değer: ', a);
+        }
+        
+    </script>
+</body>
+</html>
