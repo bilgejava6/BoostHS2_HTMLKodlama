@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürün Listesi</title>
+</head>
+<body>
+    <h1>Ürün Listesi</h1>
+    <div>
+        <input type="text" id="txtlimit" placeholder="Limit">
+        <button onclick="getir()">ürünListesi Getir</button>
+    </div>
+    <hr>
+    <ul></ul>
+    <script>
+        function getir(){
+            let limit = document.getElementById('txtlimit').value; // limit değeri alınır.
+            fetch('https://dummyjson.com/products?limit='+limit) // get isteği yapılır.
+            .then(response=> response.json()) // gelen veriyi json formatına çevirir.
+            .then(data=>{            // gelen veri okunur
+                // Dikkat bir array içerisindeki dataları loop kullanarak okumak ve sayfaya yazdırmak gereklidir.
+                // bunu yapmanın en doğru yolları. forEach veya map fonksiyonlarını kullanmaktır.
+                data.products.forEach(element => { // liste içerisindeki veriler tek tek okunur.
+                    console.log('ürün adı....: ', element.title);
+                    console.log('ürün fiyatı.: ', element.price);
+                    console.log('-------------------------------------------');
+                    let ul = document.querySelector('ul'); // ul bişlenini seçiyoruz.
+                    let li = document.createElement('li'); // li elemanı oluşturulur.
+                    li.textContent = element.title + ' : ' + element.price; // li ye bilgileri girilyoruz.
+                    ul.appendChild(li); // li elemanı ul elemanına eklenir.
+                });
+            })
+        }        
+    </script>
+</body>
+</html>

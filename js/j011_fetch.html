@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch ile İstekleri Yönetmek</title>
+</head>
+<body>
+    <script>
+        /**
+         * Fetch API, günümüz tarayıcılarında bulunan client ile sunucu arasında iletişimi sağlayan bir API'dir.
+         * Client tarafından GET, POST, PUT, DELETE gibi HTTP istekleri yapılmasını sağlar.
+         * 
+         */ 
+        // GET İstekleri :  fetch('https://dummyjson.com/products') 
+        // then() gelen veriyi işlemek için kullanılır.
+        // response.json() : gelen veriyi json formatına çevirir.
+        fetch('https://dummyjson.com/products')
+        .then(response=> response.json()) // gelen veriyi json formatına çevirir.
+        .then(data=> console.log(data.products[3].description)); // gelen veriyi konsola yazdırır.
+    </script>
+</body>
+</html>
