@@ -21,20 +21,20 @@
         <div class="row">
             <div class="col">
                 <div class="mb-2">
-                    <input type="text" placeholder="müşteri ad soyad" class="form-control">
+                    <input id="txtAdSoyad" type="text" placeholder="müşteri ad soyad" class="form-control">
                 </div>
                 <div class="mb-2">
-                    <input type="tel" placeholder="müşteri telefon" class="form-control">
+                    <input id="txtTelefon" type="tel" placeholder="müşteri telefon" class="form-control">
                 </div>
                 <div class="mb-2">
-                    <input type="email" placeholder="müşteri email" class="form-control">
+                    <input id="txtEmail" type="email" placeholder="müşteri email" class="form-control">
                 </div>
                 <div class="mb-2" style="position: relative;">
                     <input id="txtPassword" type="password" placeholder="müşteri şifre" class="form-control" />
                     <i onclick="openPassword()" style="position: absolute; top:12px; right: 5px" class="fa-regular fa-eye-slash"></i>
                 </div>
                 <div class="mb-2">
-                    <select class="form-select">
+                    <select id="txtSehir" class="form-select">
                         <option>Seçiniz</option>
                         <option value="01">Adana</option>
                         <option value="02">Adıyaman</option>
@@ -56,7 +56,7 @@
             </div>
             <div class="col align-content-end">
                 <div class="mb-3 d-grid">
-                    <button class="btn btn-primary">Müşteri Ekle</button>
+                    <button onclick="ekle()" class="btn btn-primary">Müşteri Ekle</button>
                 </div>
             </div>
         </div>
@@ -123,6 +123,59 @@
     </div>
 
     <script>
+        // Array - DİKKAT! Buj bilgi sunucudan da gelebilir. Biz sadece örnek olması için bunu kullandık.
+        const musteriListesi = [
+            {
+                id: 1,
+                adSoyad: 'Muhammet HOCA',
+                telefon: '0555 555 55 55',
+                email: 'muhammet@gmail.com',
+                sehir: 'İstanbul',
+                sifre: '123456'
+            }
+        ];
+        function ekle(){
+            // ilk olarak HTML tag leri içinden değerleri okunur.
+            const adSoyad = document.getElementById('txtAdSoyad').value;
+            const telefon = document.getElementById('txtTelefon').value;
+            const email = document.getElementById('txtEmail').value;
+            const sehir = document.getElementById('txtSehir').value;
+            const sifre = document.getElementById('txtPassword').value;
+            // yeni bir json objesi oluşturulur.
+            const yeniMusteri = {
+                id: musteriListesi.length + 2,
+                adSoyad: adSoyad,
+                telefon: telefon,
+                email: email,
+                sehir: sehir,
+                sifre: sifre
+            }
+            // müşteri lsitesine yeni müşteri eklenir.
+            musteriListesi.push(yeniMusteri);
+            // müşteri listesi değiştiği için tekrar listelenmeli.
+            musteriListele();
+        }
+        function musteriListele(){
+            const tbody = document.querySelector('tbody'); // tablonun tbody'sini seçtik.
+            tbody.innerHTML = ''; // tbody içeriğini temizledik.
+            musteriListesi.forEach(m=>{ // müşteri listesini dönüp içindeki değerli tabloya aktaracağız.
+                tbody.innerHTML += `
+                    <tr>
+                            <td>${m.id}</td>
+                            <td>${m.adSoyad}</td>
+                            <td>${m.telefon}</td>
+                            <td>${m.email}</td>
+                            <td>${m.sehir}</td>
+                            <td>
+                                <button class="btn btn-danger">Sil</button>
+                                <button class="btn btn-warning">Düzenle</button>
+                            </td>
+                    </tr>
+                `;
+            });
+        }
+        musteriListele(); // sayfa yüklendiğinde müşteri listesini gösterir. 1 kez çalışır.
+
         function openPassword(){
             const pass = document.getElementById('txtPassword');
             pass.setAttribute('type', pass.getAttribute('type') === 'password' ? 'text' : 'password');
