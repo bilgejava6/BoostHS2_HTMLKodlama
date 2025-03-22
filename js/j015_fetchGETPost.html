@@ -122,39 +122,59 @@
     </style>
 </head>
 <body>
-    
-    <div class="container">
-        <div class="tweet">
-            <div class="tweet-header">
-                <img src="https://picsum.photos/100/100" alt="Profile Picture" class="profile-pic">
-                <div class="user-info">
-                    <a href="#" class="user-name">John Doe</a>
-                    <span class="post-time">2 saat önce</span>
-                </div>
-            </div>
-            <div class="tweet-content">
-                Bu bir örnek tweet içeriğidir. Twitter benzeri bir post tasarımı ile modern ve kullanıcı dostu bir arayüz oluşturulmuştur. #WebDesign #UI
-            </div>
-            <img src="https://picsum.photos/600/225" alt="Tweet Image" class="tweet-image">
-            <div class="tweet-actions">
-                <button class="action-button reply">
-                    <i class="far fa-comment"></i>
-                    <span>128</span>
-                </button>
-                <button class="action-button retweet">
-                    <i class="fas fa-retweet"></i>
-                    <span>254</span>
-                </button>
-                <button class="action-button like">
-                    <i class="far fa-heart"></i>
-                    <span>1.2K</span>
-                </button>
-                <button class="action-button share">
-                    <i class="far fa-share-square"></i>
-                </button>
-            </div>
-        </div>        
+    <div id="app">
+
     </div>
+
+ 
     
+    <script>
+        fetch('https://dummyjson.com/posts')
+        .then(response => response.json())
+        .then(data=>{
+           console.log(data.posts)
+           let app = document.getElementById('app');
+           app.innerHTML = '';
+            data.posts.forEach(element => {
+                app.innerHTML += `
+                
+                <div class="container">
+                <div class="tweet">
+                    <div class="tweet-header">
+                        <img src="https://picsum.photos/100/100" alt="Profile Picture" class="profile-pic">
+                        <div class="user-info">
+                            <a href="#" class="user-name">John Doe</a>
+                            <span class="post-time">2 saat önce</span>
+                        </div>
+                    </div>
+                    <div class="tweet-content">
+                    ${element.body}
+                    </div>
+                    <img src="https://picsum.photos/600/225" alt="Tweet Image" class="tweet-image">
+                    <div class="tweet-actions">
+                        <button class="action-button reply">
+                            <i class="far fa-comment"></i>
+                            <span>${element.views}</span>
+                        </button>
+                        <button class="action-button retweet">
+                            <i class="fas fa-retweet"></i>
+                            <span>${element.reactions.dislikes}</span>
+                        </button>
+                        <button class="action-button like">
+                            <i class="far fa-heart"></i>
+                            <span>${element.reactions.likes}</span>
+                        </button>
+                        <button class="action-button share">
+                            <i class="far fa-share-square"></i>
+                        </button>
+                    </div>
+                </div>        
+            </div>
+                
+                `;
+            });
+        })
+    </script>
+
 </body>
 </html>
