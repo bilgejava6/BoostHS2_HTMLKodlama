@@ -167,6 +167,14 @@
                         <button class="action-button share">
                             <i class="far fa-share-square"></i>
                         </button>
+
+                    </div>
+                    <div>
+                    ${
+                        element.tags.map(tag => {
+                            return `<span># ${tag}</span>`
+                        })    
+                    }
                     </div>
                 </div>        
             </div>
