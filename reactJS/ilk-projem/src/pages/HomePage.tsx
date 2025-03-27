@@ -8,7 +8,19 @@ function HomePage(){
 
     return (
         <div>
-            <h1>Ana Sayfa</h1>
+            <div className="container">
+                <div className="row mt-5">
+                    <div className="col">
+
+                    </div>
+                    <div className="col">
+                        <button className="btn btn-success">Bu bir bootstrap butondur</button>
+                    </div>
+                    <div className="col">
+
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

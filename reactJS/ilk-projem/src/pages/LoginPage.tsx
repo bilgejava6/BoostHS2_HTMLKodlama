@@ -1,4 +1,4 @@
-
+import {useState} from 'react';
 /**
  * DİKKAT!!!!!
  * return işlemi sadece bir tane parent element döndürmelidir.
@@ -12,22 +12,33 @@ function LoginPage() {
   /**
    * Eğer giriş butonuna basılır ise butona basıldı yazsın.
    * ()=> {} arrow function
+   * DİKKAT!!!!
+   * bir react sayfasında, component in de bir değişiklik olduğunda bunun react tarafından anlaşılması 
+   * gerekir. Bu işlemi yapmak için belli tetikleyiciler var. Bunlar HOOK lar içerisinde yer alır.
+   * useState, useEffect, useReducer, useContext
+   * --------
+   * bir değişkenin değiştiğin react e anlatmak için useState kullanılır.
    */
+
   let userName = '';
   let password = '';
-  let isWrongPassword = false;
+  // let isWrongPassword = false;
+  // JAva da bir değişkenin erişime kapatılıp kontrollü erişime açılması için getter ve setter kullanılır.
+  //        getter             setter
+  const [isWrongPassword, setIsWrongPassword] = useState(false);
    const doLogin = ()=>{
      if(userName === 'muhammet' && password === '123456'){
           // başarılı
-          isWrongPassword = false;
+          setIsWrongPassword(false);
           console.log('Giriş yapıldı.');
      }else{
           // kullanıcı adı veya şifre hatalı
-          isWrongPassword = true;
+          setIsWrongPassword(true);
           console.log('Kullanıcı adı veya şifre hatalı....: ', isWrongPassword);
      }
      
    }  
+   console.log('login page render işlemi yapıldı');
   return (
     <>
         <h1>Login Page</h1>
@@ -35,7 +46,7 @@ function LoginPage() {
         <div>
              <input type="text" placeholder="Kullanıcı Adı" onChange={evt=>{
                userName = evt.target.value;
-               console.log('olan olay......: ', evt);
+               //console.log('olan olay......: ', evt);
                }}/>
         </div>
        <div>
@@ -43,6 +54,7 @@ function LoginPage() {
        </div>
        <div>
           {
+              
                // hatalı bilgi girşi yapılmış ve bu değer true olmuş ise
                isWrongPassword &&  <label style={{color: 'red'}}>* Kullanıcı adı ya da şifre hatalıdır</label>
           }
