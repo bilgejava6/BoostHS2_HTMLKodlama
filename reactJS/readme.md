@@ -30,3 +30,20 @@
     ayağa kaldırmak için 
     "npm run dev" komutunu terminal ekranında çalıştırınız.
 
+## React Router Kullanımı
+    yükleme ve detaylı bilgi için: https://reactrouter.com/start/declarative/installation
+
+    react router kurulmalı ve react router dom kurulmalı
+    "npm install react-router"
+    "npm install react-router-dom"
+
+    Kullanım,
+    - öncelikle routing işlemlerin yönetecek bir TSX, JS dosyası oluşturunuz, (routerpage.tsx)
+    - return kısmına BrowserRouter bileşeni eklenir.
+    - bu bileşenin içierisine Routers bileşeni eklenir
+    - bu bileşeninde içerisine uygulamanızda bulunan sayfa componentlerini ve url lerini içeren
+    route ları ekliyorsunuz.
+
+
+
+

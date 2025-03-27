@@ -9,7 +9,12 @@
  * eğer istenir ise sadece boş tag ile döndürülebilir.
  */
 function LoginPage() {
-     
+  /**
+   * Eğer giriş butonuna basılır ise butona basıldı yazsın.
+   */
+   const doLogin = ()=>{
+     alert("Butona basıldı");
+   }  
   return (
     <>
         <h1>Login Page</h1>
@@ -21,7 +26,7 @@ function LoginPage() {
             <input type="password" placeholder="Şifre" />
        </div>
         <div>
-             <button>Giriş Yap</button>
+             <button onClick={doLogin}>Giriş Yap</button>
         </div>
        
     </>    
